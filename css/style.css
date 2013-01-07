@@ -1,0 +1,52 @@
+/*
++----------------------------------------------------------------+
+	Reset CSS					
++----------------------------------------------------------------+
+*/
+body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,textarea,p,blockquote,th,td,address {margin:0; padding:0}
+table {border-collapse:collapse; border-spacing:0; font-size:inherit}
+fieldset, img {border:0}
+a {margin:0; padding:0; text-decoration:none}
+
+/*
++----------------------------------------------------------------+
+	Extras														
++----------------------------------------------------------------+
+*/
+.alignleft {float:left}
+.alignright {float:right}
+.clearfix:before, .clearfix:after {content:"\0020"; display:block; height:0; visibility:hidden}
+.clearfix:after {clear:both}
+.clearfix {zoom:1}
+.clear {clear:both}
+
+/*
++----------------------------------------------------------------+
+	Definicoes Gerais														
++----------------------------------------------------------------+
+*/
+body {background:#e3e3e3 url(../img/background.png) no-repeat center top; font:62.5% Arial, Helvetica, sans-serif}
+
+/*
++----------------------------------------------------------------+
+	Container														
++----------------------------------------------------------------+
+*/
+#container {margin:30px auto; width:600px}
+.loading {display:block; margin:0 auto}
+
+/*
++----------------------------------------------------------------+
+	Videos														
++----------------------------------------------------------------+
+*/
+.video {background-color:#fff; border-radius:5px 5px 5px 5px; box-shadow:0 0 5px rgba(0, 0, 0, 0.3); margin:0 0 13px; padding:10px 8px; position:relative}
+.video .thumb {border:1px solid #000; float:left; height:105px; position:relative; width:185px}
+.video .thumb span {background-color:#000; border-radius:3px 3px 3px 3px; bottom:2px; color:#fff; font-size:1.2em; padding:2px 3px; position:absolute; right:2px}
+.video .thumb img {height:105px; width:185px}
+.video-content {float:left; margin:0 0 0 10px; width:386px}
+.video-content h2 {color:#3A9DFF; clear:both; font-size:1.5em; text-align:center; margin-bottom:10px}
+.video-content a {color:#3A9DFF}
+.video-content .date {float:left; font:1.1em Arial, Helvetica, sans-serif; margin-bottom:10px}
+.video-content .views {float:right; font:1.1em Arial, Helvetica, sans-serif; margin-bottom:10px}
+.video-content .description {clear:both; font:1.2em Arial, Helvetica, sans-serif;}

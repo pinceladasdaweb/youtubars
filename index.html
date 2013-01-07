@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Youtubars - Display Youtube user feed with jQuery and Handlebars Template</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="container" class="clearfix"><img class="loading" src="img/ajax-loader.gif" alt="Loading"></div>
+
+<script id="youtube-template" type="text/x-handlebars-template">
+    {{#each this}}
+	<div class="video clearfix">
+		<div class="thumb"><a target="_blank" title="{{title}}" href="{{link}}"><img title="{{title}}" alt="{{title}}" src="{{image}}"></a><span>{{duration}}</span></div>
+		<div class="video-content">
+			<h2><a target="_blank" title="{{title}}" href="{{link}}">{{title}}</a></h2>
+			<p class="date"><strong>Published: </strong>{{published}}</p>
+			<p class="views"><strong>Views: </strong>{{viewCount}}</p>
+			{{#if description}}
+			<p class="description">{{description}}</p>
+			{{/if}}
+		</div>
+	</div>
+    {{/each}}
+</script>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
+<script type="text/javascript" src="src/youtube.js"></script>
+</body>
+</html>
