@@ -23,6 +23,30 @@ Display Youtube user feed with jQuery and Handlebars Template.
 	});
 ```
 
+##Customize Template
+
+1. To customize the template open the index.html file and look for the following block of code:
+
+```javascript
+<script id="youtube-template" type="text/x-handlebars-template">
+    {{#each this}}
+	<div class="video clearfix">
+		<div class="thumb"><a target="_blank" title="{{title}}" href="{{link}}"><img title="{{title}}" alt="{{title}}" src="{{image}}"></a><span>{{duration}}</span></div>
+		<div class="video-content">
+			<h2><a target="_blank" title="{{title}}" href="{{link}}">{{title}}</a></h2>
+			<p class="date"><strong>Published: </strong>{{published}}</p>
+			<p class="views"><strong>Views: </strong>{{viewCount}}</p>
+			{{#if description}}
+			<p class="description">{{description}}</p>
+			{{/if}}
+		</div>
+	</div>
+    {{/each}}
+</script>
+```
+
+2. Change the HTML as it deems necessary.
+
 ##License
 
 [WTFPL](http://www.wtfpl.net/)
