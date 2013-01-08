@@ -45,7 +45,7 @@ Display Youtube user feed with jQuery and Handlebars Template.
 </script>
 ```
 
-2. Change the HTML as it deems necessary.
+Change the HTML as it deems necessary.
 
 ##License
 
