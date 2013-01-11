@@ -13,7 +13,7 @@ Handlebars.registerHelper("duration", function() {
 
 Handlebars.registerHelper("published", function() {
 	return new Handlebars.SafeString(
-		moment().startOf('day').fromNow()
+		moment(this.published, "YYYYMMDD").fromNow()
 	);
 });
 
