@@ -19,7 +19,7 @@ Display Youtube user feed with jQuery and Handlebars Template.
 		template: $('#youtube-template').html(),	// The ID of your template
 		container: $('#container'),					// domNode to attach to
 		username: 'googlechrome',					// Youtube username
-		count: '30'									// Number of videos to display. Maximum 50
+		count: 30									// Number of videos to display. Maximum 50
 	});
 ```
 

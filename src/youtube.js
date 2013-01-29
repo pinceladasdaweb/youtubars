@@ -103,5 +103,5 @@ Youtubars.init({
     template: $('#youtube-template').html(),
     container: $('#container'),
     username: 'googlechrome',
-    count: '30'
+    count: 30
 });
