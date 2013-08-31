@@ -23,14 +23,20 @@ Handlebars.registerHelper("description", function() {
     );
 });
 
+Handlebars.registerHelper("viewCount", function() {
+    return new Handlebars.SafeString(
+        Youtubars.formatNumber(this.viewCount)
+    );
+});
+
 var Youtubars = {
-    init: function(config) {
+    init: function (config) {
         this.url = 'http://gdata.youtube.com/feeds/api/videos?v=2&max-results='+config.count+'&alt=json&orderby=published&format=5&author='+config.username+'&callback=?';
         this.template = config.template;
         this.container = config.container;
         this.fetch();
     },
-    attachTemplate: function() {
+    attachTemplate: function () {
         var template = Handlebars.compile(this.template);
 
         this.container.empty().append(template(this.youtube));
@@ -57,7 +63,7 @@ var Youtubars = {
             self.attachTemplate();
         });
     },
-    seconds2time: function(seconds) {
+    seconds2time: function (seconds) {
         var hours   = Math.floor(seconds / 3600),
             minutes = Math.floor((seconds - (hours * 3600)) / 60),
             seconds = seconds - (hours * 3600) - (minutes * 60),
@@ -78,7 +84,12 @@ var Youtubars = {
         }
         return time;
     },
-    truncate: function(text, limit) {
+    formatNumber: function (num) {
+        return ("" + num).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, function ($1) {
+            return $1 + "."
+        });
+    },
+    truncate: function (text, limit) {
         if(text.length>limit){
             limit--;
             last = text.substr(limit-1,1);
