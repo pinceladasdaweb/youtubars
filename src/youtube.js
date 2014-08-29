@@ -1,6 +1,6 @@
 /*
 *
-* Youtubars 1.0
+* Youtubars 1.0.1
 * Copyright 2013, Pedro Rogerio
 * Licensed under the WTFPL licenses (http://www.wtfpl.net/).
 *
@@ -43,11 +43,11 @@ var Youtubars = {
     },
     fetch: function() {
         var self = this;
-        
+
         $.getJSON(this.url, function(data) {
             var feed = data.feed,
                 entries = feed.entry || [];
-            
+
             self.youtube = $.map(entries, function(videos) {
                 return {
                     image: videos.media$group.media$thumbnail[1].url,
@@ -68,7 +68,7 @@ var Youtubars = {
             minutes = Math.floor((seconds - (hours * 3600)) / 60),
             seconds = seconds - (hours * 3600) - (minutes * 60),
             time = "";
-        
+
         if (hours != 0) {
             time = hours+":";
         }
@@ -106,13 +106,6 @@ var Youtubars = {
                 text = text.substr(0,limit-1) + '...';
             }
         }
-        return text;    
+        return text;
     }
 };
-
-Youtubars.init({
-    template: $('#youtube-template').html(),
-    container: $('#container'),
-    username: 'googlechrome',
-    count: 30
-});
