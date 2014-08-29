@@ -5,16 +5,16 @@ Display Youtube user feed with jQuery and Handlebars Template.
 
 ##Usage
 
-1. Paste right before your page's closing `</body>` tag
+1 - Paste right before your page's closing `</body>` tag
 ```html
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
-<script type="text/javascript" src="src/youtube.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script type="text/javascript" src="src/youtube.min.js"></script>
 ```
 
-2. From within a script tag or a JS file
-```javascript	
+2 - From within a script tag or a JS file
+```javascript
 	Youtubars.init({
 		template: $('#youtube-template').html(),	// The ID of your template
 		container: $('#container'),					// domNode to attach to
@@ -25,7 +25,7 @@ Display Youtube user feed with jQuery and Handlebars Template.
 
 ##Customize Template
 
-1. To customize the template open the index.html file and look for the following block of code:
+1 - To customize the template open the index.html file and look for the following block of code:
 
 ```javascript
 <script id="youtube-template" type="text/x-handlebars-template">
