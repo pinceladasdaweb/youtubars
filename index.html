@@ -25,9 +25,17 @@
     {{/each}}
 </script>
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/1.7.2/moment.min.js"></script>
-<script type="text/javascript" src="src/youtube.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script type="text/javascript" src="src/youtube.min.js"></script>
+<script type="text/javascript">
+	Youtubars.init({
+	    template: $('#youtube-template').html(),
+	    container: $('#container'),
+	    username: 'googlechrome',
+	    count: 30
+	});
+</script>
 </body>
 </html>
